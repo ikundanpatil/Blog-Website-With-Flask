@@ -2,7 +2,6 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.x-blue.svg)
-![Flask](https://img.shields.io/badge/flask-black.svg)
 
 A blog management system built with Flask, MySQL, SQLAlchemy, Bootstrap 5, and CKEditor. Full CRUD for blog posts, with a rich text editor and a responsive UI.
 
