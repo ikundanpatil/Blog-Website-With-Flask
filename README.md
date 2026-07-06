@@ -1,154 +1,245 @@
-# Blog-Website-With-Flask
+# Flask Blog Website
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Python](https://img.shields.io/badge/python-3.x-blue.svg)
+A modern and responsive **Blog Management System** built with **Flask**, **MySQL**, **SQLAlchemy**, **Bootstrap 5**, and **CKEditor**. The application provides complete CRUD functionality for managing blog posts through an intuitive user interface.
 
-A blog management system built with Flask, MySQL, SQLAlchemy, Bootstrap 5, and CKEditor. Full CRUD for blog posts, with a rich text editor and a responsive UI.
+<p align="center">
 
-## Contents
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-3.x-000000?style=for-the-badge&logo=flask)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap)
+![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
 
-- [Features](#features)
-- [Built With](#built-with)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
+</p>
 
 ---
 
-## Features
+## Overview
 
-- Create, read, update, and delete blog posts
-- Rich text editing via CKEditor
-- Image support via URL
-- Automatic post timestamps
-- MySQL persistence through SQLAlchemy ORM
-- Responsive Bootstrap 5 layout
+This project demonstrates how to build a full-stack web application using Flask and SQLAlchemy while implementing complete CRUD (Create, Read, Update, Delete) functionality.
 
----
+Users can:
 
-## Built With
+- Create blog posts
+- View blog posts
+- Edit existing posts
+- Delete posts
+- Write rich-text content using CKEditor
+- Store data in a MySQL database
 
-| Technology | Purpose |
-|------------|---------|
-| Python | Backend |
-| Flask | Web framework |
-| SQLAlchemy | ORM |
-| MySQL | Database |
-| Bootstrap 5 | UI framework |
-| Flask-WTF / WTForms | Forms and validation |
-| CKEditor | Rich text editor |
-| Jinja2 | Templating |
+The project was built as part of my Flask learning journey and focuses on clean architecture, responsive UI, and backend development.
 
 ---
 
-## Project Structure
+# Features
 
-```
-Flask-Blog/
+- Full CRUD operations
+- Responsive Bootstrap 5 interface
+- Rich Text Editor (CKEditor)
+- MySQL database integration
+- SQLAlchemy ORM
+- WTForms validation
+- Dynamic Jinja2 templates
+- Automatic post date generation
+- Image support using URLs
+- Modular Flask project structure
+
+---
+
+# Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Language | Python |
+| Framework | Flask |
+| Database | MySQL |
+| ORM | SQLAlchemy |
+| Forms | Flask-WTF |
+| Rich Text | CKEditor |
+| Frontend | HTML5, CSS3, Bootstrap 5 |
+| Template Engine | Jinja2 |
+
+---
+
+# Project Structure
+
+```text
+Blog-Website-With-Flask/
 │
 ├── static/
 │   ├── assets/
 │   ├── css/
-│   └── js/
+│   ├── js/
+│   └── screenshots/
 │
 ├── templates/
-│   ├── header.html
-│   ├── footer.html
-│   ├── index.html
-│   ├── post.html
-│   ├── make-post.html
 │   ├── about.html
-│   └── contact.html
+│   ├── contact.html
+│   ├── footer.html
+│   ├── header.html
+│   ├── index.html
+│   ├── make-post.html
+│   └── post.html
 │
 ├── app.py
 ├── requirements.txt
+├── .env.example
 ├── README.md
 └── LICENSE
 ```
 
 ---
 
-## Installation
+# Installation
 
-### 1. Clone the repository
+## Clone Repository
 
 ```bash
-git clone https://github.com/<your-username>/flask-blog.git
-cd flask-blog
+git clone https://github.com/ikundanpatil/Blog-Website-With-Flask.git
+
+cd Blog-Website-With-Flask
 ```
 
-### 2. Create a virtual environment
+---
 
-**Windows**
+## Create Virtual Environment
+
+### Windows
+
 ```bash
 python -m venv venv
+
 venv\Scripts\activate
 ```
 
-**Linux / macOS**
+### Linux / macOS
+
 ```bash
 python3 -m venv venv
+
 source venv/bin/activate
 ```
 
-### 3. Install dependencies
+---
+
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Create the MySQL database
+---
+
+## Create Database
 
 ```sql
 CREATE DATABASE posts;
 ```
 
-### 5. Configure the database connection
+---
 
-Config is hardcoded in `app.py` — no `.env` support yet (tracked in [Roadmap](#roadmap)). Open `app.py` and set the database URI and secret key to match your local MySQL credentials.
+## Configure Environment Variables
 
-### 6. Run the app
+Create a file named `.env`
+
+```env
+SECRET_KEY=your_secret_key
+
+DATABASE_URL=mysql+mysqlconnector://username:password@localhost/posts
+```
+
+---
+
+## Run Application
 
 ```bash
 python app.py
 ```
 
-Then open `http://127.0.0.1:5003/` in your browser.
+Open your browser:
+
+```
+http://127.0.0.1:5003
+```
 
 ---
 
-## Roadmap
+# Environment Variables
 
-Ordered by what unblocks the most other work:
-
-- [ ] Load config (`SECRET_KEY`, database URI) from a `.env` file instead of hardcoding in `app.py`
-- [ ] User authentication (login/signup) and roles (admin/user)
-- [ ] Image upload instead of image-by-URL
-- [ ] Pagination
-- [ ] Search
-- [ ] Categories/tags
-- [ ] Comment system
-- [ ] Custom 404/500 error pages
-- [ ] Unit tests
-- [ ] Docker support
-- [ ] Deployment (Render/Railway)
+| Variable | Description |
+|----------|-------------|
+| SECRET_KEY | Flask Secret Key |
+| DATABASE_URL | MySQL Database URL |
 
 ---
 
-## Contributing
+# Learning Outcomes
 
-1. Fork the repo
-2. Create a feature branch: `git checkout -b feature-name`
-3. Commit: `git commit -m "Add feature"`
-4. Push: `git push origin feature-name`
-5. Open a pull request
+Through this project, I gained hands-on experience with:
 
-If you're picking up a Roadmap item, mention it in the PR description so effort doesn't overlap.
+- Flask routing
+- SQLAlchemy ORM
+- MySQL integration
+- CRUD operations
+- WTForms
+- CKEditor
+- Jinja2 Templates
+- Bootstrap 5
+- Environment Variables
+- Git & GitHub
 
 ---
 
-## License
+# Contributing
 
-MIT License.
+Contributions are welcome.
+
+1. Fork the repository
+
+2. Create a new branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push your branch
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+# Author
+
+**Kundan Patil**
+
+BCA (Data Science & Machine Learning)
+
+Passionate about Python, Flask, AI/ML, Data Science, and Full Stack Development.
+
+### Connect with me
+
+- GitHub: https://github.com/ikundanpatil
+- LinkedIn: *Add your LinkedIn profile*
+
+---
+
+# License
+
+This project is licensed under the MIT License.
+
+---
+
+## Show your support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
