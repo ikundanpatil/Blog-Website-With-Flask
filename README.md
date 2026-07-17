@@ -266,7 +266,7 @@ Passionate about Python, Flask, AI/ML, Data Science, Full-Stack Development, and
 ### Connect with Me
 
 - GitHub: https://github.com/ikundanpatil
-- LinkedIn: https://www.linkedin.com/in/YOUR-LINKEDIN
+- LinkedIn: https://www.linkedin.com/in/kundan-patil-03565441b
 
 ---
 
